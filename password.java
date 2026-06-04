@@ -6,15 +6,13 @@ class InvalidPasswordException extends Exception {
     }
 }
 
-public class PasswordValidation {
+public class Main {
 
     public static void validatePassword(String password)
             throws InvalidPasswordException {
 
-        if (password.length() < 8) {
-            throw new InvalidPasswordException(
-                    "Password must be at least 8 characters long.");
-        }
+        if (password.length() < 8)
+            throw new InvalidPasswordException("Password must be at least 8 characters long.");
 
         boolean hasDigit = false;
 
@@ -25,10 +23,8 @@ public class PasswordValidation {
             }
         }
 
-        if (!hasDigit) {
-            throw new InvalidPasswordException(
-                    "Password must contain at least one digit.");
-        }
+        if (!hasDigit)
+            throw new InvalidPasswordException("Password must contain at least one digit.");
 
         System.out.println("Password is valid.");
     }
@@ -42,7 +38,7 @@ public class PasswordValidation {
         try {
             validatePassword(password);
         } catch (InvalidPasswordException e) {
-            System.out.println("Exception: " + e.getMessage());
+            System.out.println(e.getMessage());
         }
 
         sc.close();
