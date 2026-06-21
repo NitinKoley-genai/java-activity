@@ -23,13 +23,9 @@ public class Main {
 
         if (!hasDigit)
             throw new InvalidPasswordException("Password must contain at least one digit.");
-
-        System.out.println("Password is valid.");
-    }
-
+        System.out.println("Password is valid.");    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Enter password: ");
         String password = sc.nextLine();
 
@@ -38,7 +34,4 @@ public class Main {
         } catch (InvalidPasswordException e) {
             System.out.println(e.getMessage());
         }
-
-        sc.close();
-    }
-}
+        sc.close();    } }
