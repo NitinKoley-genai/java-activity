@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 class InvalidPasswordException extends Exception {
     public InvalidPasswordException(String message) {
-        super(message);
-    }
-}
+        super(message);     } }
 
 public class Main {
 
